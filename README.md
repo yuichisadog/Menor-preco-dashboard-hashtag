@@ -52,14 +52,5 @@ O painel exibe as seguintes informações:
   - Todos os valores são exibidos no formato **Real (R$)**.
   - A função `FORMAT()` foi aplicada para garantir a exibição correta da moeda.
 
----
 
-## ⚙️ Cálculos e DAX Utilizados
-Para obter as informações exibidas no dashboard, foram utilizadas as seguintes funções **DAX**:
 
-### 1️⃣ Produto com Menor Preço
-```DAX
-Produto_Menor_Preco = 
-VAR MinPreco = MIN(Tabela[Preco])
-RETURN
-LOOKUPVALUE(Tabela[Produto], Tabela[Preco], MinPreco)
